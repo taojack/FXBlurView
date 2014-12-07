@@ -100,7 +100,7 @@
     if (tintColor && CGColorGetAlpha(tintColor.CGColor) > 0.0f)
     {
         CGContextSetFillColorWithColor(ctx, [tintColor colorWithAlphaComponent:0.25].CGColor);
-        CGContextSetBlendMode(ctx, kCGBlendModePlusLighter);
+        CGContextSetBlendMode(ctx, kCGBlendModePlusDarker);
         CGContextFillRect(ctx, CGRectMake(0, 0, buffer1.width, buffer1.height));
     }
     
@@ -532,6 +532,8 @@
         //prevents pixelation on old devices
         scale = 1.0f;
     }
+    
+    
     UIGraphicsBeginImageContextWithOptions(size, NO, scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, -bounds.origin.x, -bounds.origin.y);

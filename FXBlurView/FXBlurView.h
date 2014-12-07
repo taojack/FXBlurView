@@ -68,7 +68,7 @@
 @property (nonatomic, assign) NSTimeInterval updateInterval;
 @property (nonatomic, assign) CGFloat blurRadius;
 @property (nonatomic, strong) UIColor *tintColor;
-@property (nonatomic, weak_ref) IBOutlet UIView *underlyingView;
+@property (nonatomic, strong) UIView *underlyingView;
 
 - (void)updateAsynchronously:(BOOL)async completion:(void (^)())completion;
 
